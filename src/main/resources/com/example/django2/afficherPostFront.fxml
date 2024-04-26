@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<AnchorPane prefHeight="600.0" prefWidth="1019.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.django2.AfficherPostFront">
+    <children>
+        <AnchorPane fx:id="tuteur_AP" layoutX="246.0" prefHeight="600.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="-3.6000000000000227" AnchorPane.topAnchor="0.0">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="radius" />
+                <String fx:value="shadow" />
+            </styleClass>
+            <children>
+                <ImageView fx:id="profile" fitHeight="51.0" fitWidth="59.0" layoutX="704.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../image/profile-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="loginLabel" layoutX="711.0" layoutY="66.0" text="Admin" />
+                <Text layoutX="295.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postes">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+                <ScrollPane layoutX="56.0" layoutY="141.0" prefHeight="336.0" prefWidth="675.0">
+                    <content>
+                        <!-- Replace this AnchorPane with your VBox containing posts -->
+                        <VBox fx:id="postContainer" spacing="10" padding="10">
+                            <!-- Post elements will be added dynamically using Java code -->
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+        <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="245.0" style="-fx-background-color: #DBC2AD;">
+            <children>
+                <!-- Your other elements here -->
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

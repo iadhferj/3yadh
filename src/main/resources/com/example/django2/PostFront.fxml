@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="565.0" spacing="10.0" styleClass="post-background" stylesheets="@stylepost.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.PostInerfaceController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="10.0">
+            <children>
+                <ImageView fx:id="profilepic" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                <VBox alignment="CENTER" prefHeight="60.0" prefWidth="438.0">
+                    <children>
+                        <HBox>
+                            <children>
+                                <Label fx:id="pusername" text="Username">
+                                    <font>
+                                        <Font name="Frank Ruehl CLM Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../Users/adam/Desktop/asset/mark.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="379.0">
+                            <children>
+                                <Label fx:id="date" text="time" textFill="#5b5b5b">
+                                    <font>
+                                        <Font name="Frank Ruehl CLM Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Pane prefHeight="60.0" prefWidth="98.0" />
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../../../Users/adam/Desktop/asset/options.png" />
+                    </image>
+                </ImageView>
+            </children>
+            <VBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+        </HBox>
+        <Label fx:id="caption" maxWidth="1.7976931348623157E308" text="Caption">
+            <VBox.margin>
+                <Insets left="14.0" />
+            </VBox.margin>
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgpost" fitHeight="535.0" fitWidth="535.0" pickOnBounds="true" preserveRatio="true" />
+        <StackPane alignment="CENTER_LEFT">
+            <children>
+                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="566.0" spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER" spacing="5.0" stylesheets="@stylepost.css">
+                            <children>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../Users/adam/Desktop/asset/like1.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../Users/adam/Desktop/asset/love.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../Users/adam/Desktop/asset/no-fight.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="nbrreaction" text="Nbr of reactions" />
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </HBox>
+                        <Pane prefHeight="58.0" prefWidth="204.0" />
+                        <Label fx:id="nbrcomment" text="Nbr of reactions" />
+                        <Label fx:id="nbrshare" text="Nbr of reactions" />
+                    </children>
+                </HBox>
+                <HBox fx:id="reactionContainer" maxWidth="-Infinity" prefHeight="58.0" prefWidth="205.0" spacing="10.0" styleClass="reaction-container" stylesheets="@stylepost.css" visible="false">
+                    <children>
+                        <ImageView fx:id="imgLike" fitHeight="50.0" fitWidth="50.0" onMousePressed="#imgclickreaction" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/like1.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="imgLove" fitHeight="50.0" fitWidth="50.0" onMousePressed="#imgclickreaction" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/heart.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="imgHate" fitHeight="50.0" fitWidth="50.0" onMousePressed="#imgclickreaction" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/like1.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <StackPane.margin>
+                        <Insets left="10.0" />
+                    </StackPane.margin>
+                    <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </HBox>
+            </children>
+        </StackPane>
+        <HBox styleClass="tob-border" stylesheets="@stylepost.css">
+            <children>
+                <HBox fx:id="LikeContainer" alignment="CENTER" onMousePressed="#clickreactionContainer" onMouseReleased="#clickreaction" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fx:id="reactionimg" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/like.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="reactionname" text="Like" />
+                    </children>
+                </HBox>
+                <HBox fx:id="commentContainer" alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/chat-bubble.png" />
+                            </image>
+                        </ImageView>
+                        <Label text="Comment" />
+                    </children>
+                </HBox>
+                <HBox fx:id="shareContainer" alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Users/adam/Desktop/asset/share.png" />
+                            </image>
+                        </ImageView>
+                        <Label text="Share" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
